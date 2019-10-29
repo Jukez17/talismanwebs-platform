@@ -1,17 +1,18 @@
 .Container {
-    flex: 1;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 2em;
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    justify-content: space-around;
 }
 
 .Block {
     background-color: rgb(255, 255, 255);
     width: 20em;
     height: 20em;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
 }
 
 .Block:hover {
