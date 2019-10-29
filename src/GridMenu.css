@@ -1,0 +1,23 @@
+.Container {
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+.Block {
+    background-color: rgb(255, 255, 255);
+    width: 20em;
+    height: 20em;
+}
+
+.Block:hover {
+    background-color: rgb(255, 255, 204);
+}
+
+.Block-text {
+    text-align: center;
+}
