@@ -17,7 +17,7 @@ function GridMenu() {
               <p className="Block-text">Text here 4</p>
           </div>
           <div className="Block">
-              <p className="Block-text">Text here 5</p>
+              <p className="Block-text">Contact Us & Feedback</p>
           </div>
       </div>
     );
