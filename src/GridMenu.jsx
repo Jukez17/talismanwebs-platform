@@ -5,16 +5,16 @@ function GridMenu() {
     return (
       <div className="Container">
           <div className="Block">
-              <p className="Block-text">Project status</p>
+              <p className="Block-text">Projects</p>
           </div>
           <div className="Block">
-              <p className="Block-text">Text here 2</p>
+              <p className="Block-text">Coming soon</p>
           </div>
           <div className="Block">
-              <p className="Block-text">Text here 3</p>
+              <p className="Block-text">Coming soon</p>
           </div>
           <div className="Block">
-              <p className="Block-text">Text here 4</p>
+              <p className="Block-text">Coming soon</p>
           </div>
           <div className="Block">
               <p className="Block-text">Contact Us & Feedback</p>
