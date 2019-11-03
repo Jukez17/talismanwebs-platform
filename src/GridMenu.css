@@ -24,4 +24,5 @@
 .Block-text {
     justify-items: center;
     text-align: center;
+    text-transform: capitalize;
 }

@@ -3,8 +3,6 @@ import './App.css';
 import Header from './Header';
 import GridMenu from './GridMenu';
 
-// if you click the live share icon the bottom left icon
-// i sent u message there
 function App() {
   return (
     <div className="HeaderContainer">

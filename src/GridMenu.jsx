@@ -5,7 +5,7 @@ function GridMenu() {
     return (
       <div className="Container">
           <div className="Block">
-              <p className="Block-text">Text here 1</p>
+              <p className="Block-text">Project status</p>
           </div>
           <div className="Block">
               <p className="Block-text">Text here 2</p>
