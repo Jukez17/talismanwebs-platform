@@ -16,9 +16,12 @@
 }
 
 .Block:hover {
-    background-color: rgb(255, 255, 204);
+    background-color: rgb(8, 8, 8);
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
 }
 
 .Block-text {
+    
     text-align: center;
 }
