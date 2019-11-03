@@ -1,5 +1,9 @@
-.App {
-  display: flex;
+.HeaderContainer {
+  background-color: #282c34;
+  height: 100%;
+}
+
+.MenuContainer {
   background-color: #282c34;
   height: 100%;
 }

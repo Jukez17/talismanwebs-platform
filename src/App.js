@@ -1,12 +1,17 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
 import GridMenu from './GridMenu';
 
+// if you click the live share icon the bottom left icon
+// i sent u message there
 function App() {
   return (
-    <div className="App">
-      <GridMenu />
+    <div className="HeaderContainer">
+      <Header />
+      <div className="MenuContainer">
+        <GridMenu />
+      </div>
     </div>
   );
 }
