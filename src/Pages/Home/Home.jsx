@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
-import Header from './Header';
-import GridMenu from './GridMenu';
+import './Home.css';
+import Header from '../../Components/Header';
+import GridMenu from '../../Components/GridMenu';
 
-function App() {
+function Home() {
   return (
     <div className="HeaderContainer">
       <Header />
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
