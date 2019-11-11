@@ -1,9 +1,11 @@
 import React from 'react';
+import MaterialUiForm from '../../Components/Form';
+import './ContactUs.css'
 
 const ContactUs = () => {
   return (
-    <div>
-        <text>Hello</text>
+    <div className="FormContainer">
+        <MaterialUiForm />
     </div>
   );
 }

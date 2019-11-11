@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./GridMenu.css";
+//import SVGIcon from "../Icons/Icons";
 
 const GridMenu = () => {
   return (
     <div className="Container">
-      <div className="Block">
+       <div className="Block">
         <p className="Block-text">
           <Link to="/account">Account</Link>
         </p>
@@ -26,6 +27,9 @@ const GridMenu = () => {
         </p>
       </div>
       <div className="Block">
+         {/* <div className="Icon">
+           <SVGIcon name="envelope" width={100} />
+         </div> */}
         <p className="Block-text">
           <Link to="/contact_us">Contact Us & Feedback</Link>
         </p>

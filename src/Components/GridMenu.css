@@ -26,3 +26,9 @@
     text-align: center;
     text-transform: capitalize;
 }
+
+.Icon {
+    align-self: centerS;
+    align-items: center;
+    font-family: sans-serif;
+}
