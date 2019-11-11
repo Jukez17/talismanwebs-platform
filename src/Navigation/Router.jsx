@@ -13,8 +13,7 @@ import ContactUs from '../Pages/Contact/ContactUs';
 // with /roster or /schedule. The / route will only match
 // when the pathname is exactly the string "/"
 
-const Main = () => (
-  <main>
+const NavigationRouter = () => (
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/account' component={Account}/>
@@ -23,7 +22,6 @@ const Main = () => (
       <Route path='/services' component={Services}/>
       <Route path='/contact_us' component={ContactUs}/>
     </Switch>
-  </main>
 )
 
-export default Main
+export default NavigationRouter;

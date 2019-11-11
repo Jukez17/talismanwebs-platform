@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Account() {
+const Account = () => {
   return (
     <div>
         <text>Hello Account</text>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./GridMenu.css";
 
-function GridMenu() {
+const GridMenu = () => {
   return (
     <div className="Container">
       <div className="Block">

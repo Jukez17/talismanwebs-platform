@@ -3,7 +3,7 @@ import './Home.css';
 import Header from '../../Components/Header';
 import GridMenu from '../../Components/GridMenu';
 
-function Home() {
+const Home = () => {
   return (
     <div className="HeaderContainer">
       <Header />

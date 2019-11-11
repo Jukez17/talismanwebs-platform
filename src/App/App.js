@@ -1,13 +1,10 @@
 import React from 'react';
-//import './App.css';
-import Home from '../Pages/Home/Home'
-//import Header from '../Components/Header';
-//import GridMenu from '../Components/GridMenu';
+import NavigationRouter from '../Navigation/Router'
 
-function App() {
+const App = () => {
   return (
       <div>
-        <Home />
+        <NavigationRouter />
       </div>
   );
 }

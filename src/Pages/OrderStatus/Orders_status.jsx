@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-function OrdersStatus() {
+const OrdersStatus = () => {
   return (
     <div>
         <text>Hello Orders</text>
