@@ -1,5 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Main from '../Pages/Main';
+import Login from '../Pages/Authentication/Login';
 import Home from '../Pages/Home/Home';
 import Account from '../Pages/Account/Account';
 import Billing from '../Pages/Billing/Billing';
@@ -15,7 +17,9 @@ import ContactUs from '../Pages/Contact/ContactUs';
 
 const NavigationRouter = () => (
     <Switch>
-      <Route exact path='/' component={Home}/>
+      <Route exact path='/' component={Main} />
+      <Route exact path='/log-in' component={Login} />
+      <Route exact path='/home' component={Home}/>
       <Route path='/account' component={Account}/>
       <Route path='/billing' component={Billing}/>
       <Route path='/order_status' component={OrderStatus}/>

@@ -1,19 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-import { createStore, combineReducers } from 'redux';
-import { reducer as reduxFormReducer } from 'redux-form';
 import "./index.css";
 import App from "./App/App";
 import * as serviceWorker from "./serviceWorker";
+// SETTING UP REDUX STORE
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import reduxThunk from "redux-thunk";
+import reducers from "./Store/Reducers";
 
-const reducer = combineReducers({
-    form: reduxFormReducer, // mounted under "form"
-  });
-  const store = (window.devToolsExtension
-    ? window.devToolsExtension()(createStore)
-    : createStore)(reducer);
+// ENHANCING STORE WITH FIREBASE
+import { reactReduxFirebase } from "react-redux-firebase";
+import firebase from "./Services/Firebase";
+
+const createStoreWithFirebase = compose(reactReduxFirebase(firebase))(
+  createStore
+);
+
+const store = createStoreWithFirebase(
+  reducers,
+  {},
+  applyMiddleware(reduxThunk)
+);
+
+// const reducer = combineReducers({
+//     form: reduxFormReducer, // mounted under "form"
+//   });
 
 ReactDOM.render(
   <Provider store={store}>

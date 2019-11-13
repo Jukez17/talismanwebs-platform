@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField'
 //import FormControlLabel from '@material-ui/core/FormControlLabel'
 //import FormControl from '@material-ui/core/FormControl'
 //import InputLabel from '@material-ui/core/InputLabel'
-import FormHelperText from '@material-ui/core/FormHelperText'
+//import FormHelperText from '@material-ui/core/FormHelperText'
 import asyncValidate from '../../Validation/AsyncValidation'
 
 const validate = values => {
@@ -46,13 +46,13 @@ const renderTextField = ({
   />
 )
 
-const renderFromHelper = ({ touched, error }) => {
-  if (!(touched && error)) {
-    return
-  } else {
-    return <FormHelperText>{touched && error}</FormHelperText>
-  }
-}
+// const renderFromHelper = ({ touched, error }) => {
+//   if (!(touched && error)) {
+//     return
+//   } else {
+//     return <FormHelperText>{touched && error}</FormHelperText>
+//   }
+// }
 
 const MaterialUiForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props
