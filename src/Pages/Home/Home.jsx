@@ -17,10 +17,14 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import { mainListItems, secondaryListItems } from "../../Components/ListItems";
-import Chart from "../../Components/Chart";
-import Deposits from "../../Components/Deposits";
-import Orders from "../../Components/Orders";
+import {
+  mainListItems, 
+  secondaryListItems,
+  thirdListItems
+} from "../../Components/Lists/ListItems";
+import Chart from "../../Components/Charts/Chart";
+import Deposits from "../../Components/Deposits/Deposits";
+import Orders from "../../Components/Orders/Orders";
 import './Home.css';
 
 const Copyright = () => {
@@ -180,6 +184,8 @@ export default function Dashboard() {
         <List>{mainListItems}</List>
         <Divider />
         <List>{secondaryListItems}</List>
+        <Divider />
+        <List>{thirdListItems}</List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

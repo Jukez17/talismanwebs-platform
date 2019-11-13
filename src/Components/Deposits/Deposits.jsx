@@ -3,7 +3,7 @@ import React from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Title from '../Components/Title';
+import Title from '../Common/Title';
 
 const useStyles = makeStyles({
   depositContext: {
@@ -17,14 +17,14 @@ export default function Deposits() {
     <React.Fragment>
       <Title>Recent Invoice</Title>
       <Typography component="p" variant="h4">
-        $3,024.00
+        3024.00 €
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
         on 12 November, 2019
       </Typography>
       <div>
         <Link color="primary" href="javascript:;">
-          View invoice
+          View invoices
         </Link>
       </div>
     </React.Fragment>

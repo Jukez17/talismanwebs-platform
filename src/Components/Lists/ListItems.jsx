@@ -9,6 +9,8 @@ import PaymentIcon from "@material-ui/icons/Payment";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import RoomServiceIcon from "@material-ui/icons/RoomService";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import './ListItems.css';
 
 export const mainListItems = (
@@ -48,13 +50,35 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Social</ListSubheader>
+    <ListSubheader inset>Reach Us</ListSubheader>
     <Link className="Link-text" to="/contact_us">
       <ListItem button>
         <ListItemIcon>
           <ContactSupportIcon />
         </ListItemIcon>
         <ListItemText primary="Contact Us" />
+      </ListItem>
+    </Link>
+  </div>
+);
+
+export const thirdListItems = (
+  <div>
+    <ListSubheader inset>Social media</ListSubheader>
+    <Link className="Link-text" to="">
+      <ListItem button>
+        <ListItemIcon>
+          <FacebookIcon />
+        </ListItemIcon>
+        <ListItemText primary="Facebook" />
+      </ListItem>
+    </Link>
+    <Link className="Link-text" to="">
+      <ListItem button>
+        <ListItemIcon>
+          <InstagramIcon />
+        </ListItemIcon>
+        <ListItemText primary="Instagram" />
       </ListItem>
     </Link>
   </div>

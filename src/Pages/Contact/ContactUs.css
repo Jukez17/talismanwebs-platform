@@ -1,4 +1,10 @@
 .FormContainer {
-    background-color: #282c34;
+    /*background-color: #282c34;*/
+    flex: 1;
     height: 100%;
+}
+
+.Form {
+    justify-self: center;
+    align-self: center;
 }
