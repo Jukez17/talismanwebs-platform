@@ -1,4 +1,5 @@
 import React from 'react';
+import RequireAuth from '../../Components/Authentication/RequireAuth'
 
 const OrdersStatus = () => {
   return (
@@ -8,4 +9,4 @@ const OrdersStatus = () => {
   );
 }
 
-export default OrdersStatus;
+export default RequireAuth(OrdersStatus);

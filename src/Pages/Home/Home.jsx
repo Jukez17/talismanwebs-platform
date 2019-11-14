@@ -1,5 +1,7 @@
 import React from "react";
 import clsx from "clsx";
+import { compose } from "redux";
+import { connect } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
@@ -17,6 +19,7 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import {
   mainListItems, 
   secondaryListItems,
@@ -25,6 +28,8 @@ import {
 import Chart from "../../Components/Charts/Chart";
 import Deposits from "../../Components/Deposits/Deposits";
 import Orders from "../../Components/Orders/Orders";
+import { signout } from "../../Store/Actions/Auth";
+import RequireAuth from '../../Components/Authentication/RequireAuth'
 import './Home.css';
 
 const Copyright = () => {
@@ -118,10 +123,13 @@ const useStyles = makeStyles(theme => ({
   },
   fixedHeight: {
     height: 240
+  },
+  signOut: {
+    marginLeft: 8
   }
 }));
 
-export default function Dashboard() {
+const Dashboard = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -165,6 +173,10 @@ export default function Dashboard() {
             <Badge badgeContent={0} color="secondary">
               <NotificationsIcon />
             </Badge>
+          </IconButton>
+          <IconButton onClick={() => signout()} color="inherit">
+              <Typography>Sign Out</Typography>
+              <ExitToAppIcon className={classes.signOut} />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -216,3 +228,23 @@ export default function Dashboard() {
     </div>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    auth: state.firebaseReducer.auth
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    signout: () => dispatch(signout())
+  };
+}
+
+export default compose(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  ),
+  RequireAuth
+)(Dashboard);

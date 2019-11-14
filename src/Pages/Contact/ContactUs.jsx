@@ -1,15 +1,17 @@
-import React from 'react';
-import MaterialUiForm from '../../Components//Form/Form';
-import './ContactUs.css'
+import React from "react";
+import MaterialUiForm from "../../Components//Form/Form";
+import "./ContactUs.css";
+import RequireAuth from "../../Components/Authentication/RequireAuth";
+import Grid from "@material-ui/core/Grid";
 
 const ContactUs = () => {
   return (
     <div className="FormContainer">
-      <div>
+      <Grid container direction="column" justify="center" alignItems="center">
         <MaterialUiForm className="Form" />
-      </div>
+      </Grid>
     </div>
   );
-}
+};
 
-export default ContactUs;
+export default RequireAuth(ContactUs);

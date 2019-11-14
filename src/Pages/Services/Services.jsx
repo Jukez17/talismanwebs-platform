@@ -1,4 +1,5 @@
 import React from 'react';
+import RequireAuth from '../../Components/Authentication/RequireAuth'
 
 const Services = () => {
   return (
@@ -8,4 +9,4 @@ const Services = () => {
   );
 }
 
-export default Services;
+export default RequireAuth(Services);
