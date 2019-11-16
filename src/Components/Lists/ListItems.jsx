@@ -5,6 +5,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import DashboardIcon from "@material-ui/icons/Dashboard";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PaymentIcon from "@material-ui/icons/Payment";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import RoomServiceIcon from "@material-ui/icons/RoomService";
@@ -15,12 +16,22 @@ import './ListItems.css';
 
 export const mainListItems = (
   <div>
+    <Link className="Link-text" to="/dashboard">
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
+    </Link>
+    <Link className="Link-text" to="/account">
+      <ListItem button>
+        <ListItemIcon>
+          <AccountCircleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Profile Account" />
+      </ListItem>
+    </Link>
     <Link className="Link-text" to="/order_status">
       <ListItem button>
         <ListItemIcon>

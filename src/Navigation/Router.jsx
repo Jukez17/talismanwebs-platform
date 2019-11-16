@@ -19,7 +19,7 @@ const NavigationRouter = () => (
     <Switch>
       <Route exact path='/' component={Main} />
       <Route exact path='/log-in' component={Login} />
-      <Route exact path='/home' component={Home}/>
+      <Route exact path='/dashboard' component={Home}/>
       <Route path='/account' component={Account}/>
       <Route path='/billing' component={Billing}/>
       <Route path='/order_status' component={OrderStatus}/>
