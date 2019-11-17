@@ -76,21 +76,21 @@ export const secondaryListItems = (
 export const thirdListItems = (
   <div>
     <ListSubheader inset>Social media</ListSubheader>
-    <Link className="Link-text" to="">
+    <a className="Link-text" href="https://www.facebook.com/TalismanWebs/">
       <ListItem button>
         <ListItemIcon>
           <FacebookIcon />
         </ListItemIcon>
         <ListItemText primary="Facebook" />
       </ListItem>
-    </Link>
-    <Link className="Link-text" to="">
+    </a>
+    <a className="Link-text" href="https://www.instagram.com/talismanwebs/">
       <ListItem button>
         <ListItemIcon>
           <InstagramIcon />
         </ListItemIcon>
         <ListItemText primary="Instagram" />
       </ListItem>
-    </Link>
+    </a>
   </div>
 );

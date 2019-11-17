@@ -9,7 +9,6 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import reduxThunk from "redux-thunk";
 import reducers from "./Store/Reducers";
-
 // ENHANCING STORE WITH FIREBASE
 import { reactReduxFirebase } from "react-redux-firebase";
 import firebase from "./Services/Firebase";
