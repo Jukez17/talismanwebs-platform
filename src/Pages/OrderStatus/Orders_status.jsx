@@ -28,7 +28,6 @@ import {
 import { signout } from "../../Store/Actions/Auth";
 import RequireAuth from '../../Components/Authentication/RequireAuth'
 import '../Home/Home.css';
-import ProfileAccount from '../../Components/Profile/ProfileAccount';
 import OrdersList from '../../Components/Orders/OrdersList';
 
 const Copyright = () => {
