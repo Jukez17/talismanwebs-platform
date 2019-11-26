@@ -5,6 +5,9 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import UserForm from '../Form/UserForm';
+import CompanyForm from '../Form/CompanyForm';
+import BillingForm from '../Form/BillingForm';
 
 const SetProfile = () => {
   const classes = useStyles();
@@ -54,7 +57,7 @@ const SetProfile = () => {
         ) : (
           <div>
             <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
-            <div>
+            <div className={classes.buttonContainer}>
               <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
                 Back
               </Button>
@@ -75,35 +78,38 @@ const SetProfile = () => {
 }
 
 const getSteps = () => {
-    return ['Fill account details', 'Company', 'Something'];
+    return ['Fill account details', 'Company', 'Billing method'];
   }
 
 const getStepContent = (step) => {
     switch (step) {
       case 0:
-        return 'Write your profile details...';
+        return <UserForm />;
       case 1:
-        return 'What is your company?';
+        return <CompanyForm />;
       case 2:
-        return 'This is the bit I really care about!';
+        return <BillingForm />;
       default:
         return 'Unknown step';
     }
   }
 
 
+
 const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
     },
+    buttonContainer: {
+      marginTop: 10,
+    },
     button: {
-      marginRight: theme.spacing(1),
+      marginRight: theme.spacing(),
     },
     instructions: {
       marginTop: theme.spacing(1),
       marginBottom: theme.spacing(1),
     },
-  }));
-  
+  }));  
 
 export default SetProfile;
